@@ -1,0 +1,14 @@
+/.vs/CloudyfoxCrud/v15/Server/sqlite3
+/.vs/CloudyfoxCrud/DesignTimeBuild
+/.vs/DBCrud/v15/Server/sqlite3
+/.vs/DB.Crud/v15/Server/sqlite3
+/.vs/DB.Crud/DesignTimeBuild
+/DB.DataAccess/bin/Debug/netcoreapp2.1
+/DB.DataAccess/obj
+/DB.Entity/obj/Debug/netcoreapp2.1
+/DB.Repo/bin/Debug/netcoreapp2.1
+/DB.Repo/obj
+/DB.Entity/obj
+/DB.Entity/bin/Debug/netcoreapp2.1
+/DB.Services/bin/Debug/netcoreapp2.1
+/DB.Services/obj

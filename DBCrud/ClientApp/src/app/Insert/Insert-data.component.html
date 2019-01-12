@@ -1,0 +1,77 @@
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-header">
+      <h1 id="forms">Add testimonial to your app </h1>
+    </div>
+  </div>
+</div>
+<div class="row">
+
+    <div *ngIf="errorMessage?.length>0" class="alert alert-danger" role="alert">
+      <p *ngFor="let error of errorMessage">
+        {{ error.description }}<br />
+      </p>
+    </div>
+
+  <form [formGroup]="createForm" (ngSubmit)="insert(createForm)" #formDir="ngForm" novalidate>
+    <div class="col-lg-6">
+      <div class="bs-component">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="text" id="email" class="form-control" formControlName="email" #email required placeholder="Enter email"/>
+          <small [hidden]="createForm.controls.email?.valid || (createForm.controls.email.pristine && !formDir.submitted)" class="text-danger">
+            Email is required
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="title">Name</label>
+          <input type="text" id="title" class="form-control" formControlName="title" #title required placeholder="Enter Name"/>
+          <small [hidden]="createForm.controls.title?.valid || (createForm.controls.title.pristine && !formDir.submitted)" class="text-danger">
+            Name is required
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="descriptions">Descriptions</label>
+          <textarea class="form-control" formControlName="descriptions" id="descriptions" rows="3"></textarea>
+          <small [hidden]="createForm.controls.descriptions?.valid || (createForm.controls.descriptions?.pristine && !formDir.submitted)" class="text-danger">
+            Description is required
+          </small>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="col-lg-4 offset-lg-1">
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" class="form-control" formControlName="address" #title required placeholder="Enter address"/>
+        <small [hidden]="createForm.controls.address?.valid || (createForm.controls.address.pristine && !formDir.submitted)" class="text-danger">
+          Address is required
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="Status">Status</label>
+        <select class="form-control" data-val="true" formControlName="isActive" id="isActive">
+          <option value="true">Enable</option>
+          <option value="false">Disable</option>
+        </select>
+        <small [hidden]="createForm.controls.isActive?.valid || (createForm.controls.isActive.pristine && !formDir.submitted)" class="text-danger">
+          Status is required
+        </small>
+      </div>
+
+
+
+
+      <!--<div class="form-group">
+        <label for="exampleInputFile">File input</label>
+        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+      </div>-->
+      <div class="page-header"></div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DB.DataAccess\DB.DataAccess.csproj" />
+    <ProjectReference Include="..\DB.Entity\DB.Entity.csproj" />
+  </ItemGroup>
+
+</Project>
